@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Messages</h1>
+    <div class="content">
+
+
+        <ul>
+            <% for (var i =0; i<data.length; i++) {%>
+                <li><a href=<%="/posts/" + data[i].id%>><%= data[i].title %></a></li>
+                <% } %>
+        </ul>
+        <h3>Add Message</h3>
+        <form id="for" action="/messages" method="post">
+            <div class="">
+                <input type="text" name="title" value="" placeholder="Message Title">
+            </div>
+            <div class="">
+                <textarea name="body" rows="8" cols="80" placeholder="Enter Message"></textarea>
+            </div>
+
+
+            <input type="submit" name="" value="Add Post">
+        </form>
+    </div>
+</body>
+
+</html>
